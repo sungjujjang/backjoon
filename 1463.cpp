@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+#define min(x, y) ((x) < (y) ? (x) : (y))
+
+int main() {
+	int n, i;
+	scanf("%d", &n);
+	int dp[1000001] = {0, };
+	for (i=2; i<=n; i++) {
+		dp[i] = dp[i-1] + 1;
+		if (i % 2 == 0) {
+			dp[i] = min(dp[i], dp[i/2] + 1);
+		}
+		if (i % 3 == 0) {
+			dp[i] = min(dp[i], dp[i/3] + 1);
+		}
+	}
+	printf("%d", dp[n]);
+	return 0;
+}
