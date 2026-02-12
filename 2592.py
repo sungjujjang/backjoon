@@ -13,4 +13,4 @@ for _ in range(10):
     total += n
     
 print(total // 10)
-print(counts.index(max(counts)) * 10)    
+print(counts.index(max(counts)) * 10)
