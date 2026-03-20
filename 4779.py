@@ -14,7 +14,6 @@ def kantoa(start, end): # 0 idx problem
     a[start+offset-1:(start+offset*2)-1] = [" "] * offset
     kantoa(start, start+offset)
     kantoa(start+offset*2, end)
-    
 
 ns = map(int, input().splitlines())
 for n in ns:
